@@ -2,12 +2,10 @@
 include "api.php";
 
 
-$apitest = new API("1123123","456456");
+$apitest = new API("0dc647722719f2ea","a3769b553680da10b40994265fb48d20");
 $params=array(
-    "name"=>1231,
-    "cover"=>456
+    "mid"=>88888894
 );
-$a = $apitest->httpGet("http://baidu.com",$params);
+$res = $apitest->httpGet("http://api.bilibili.com/x/internal/v2/fav/folder",$params);
 
-
-var_dump($a);
+var_dump($res);
