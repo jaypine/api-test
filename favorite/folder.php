@@ -4,8 +4,17 @@ include "api.php";
 
 $apitest = new API("0dc647722719f2ea","a3769b553680da10b40994265fb48d20");
 $params=array(
-    "mid"=>88888894
+	"type"=>2,
+	"oid"=>123,
+    // "vmid"=>88888894,    
+    "mid"=>8801199
 );
-$res = $apitest->httpGet("http://api.bilibili.co/x/internal/v2/fav/folder",$params);
+
+// $host = "http://127.0.0.1:7671";
+$host = "http://api.bilibili.co";
+
+$url = $host."/x/internal/v3/fav/folder";
+
+$res = $apitest->httpGet($url,$params);
 
 var_dump($res);
