@@ -3,8 +3,8 @@ include "api.php";
 
 $apitest = new API("0dc647722719f2ea","a3769b553680da10b40994265fb48d20");
 $params=array(
-    "type"=>2,
-    "mid"=>88888894,
+    "type"=>8,
+    "mid"=>88888896,
     // "fid"=>6,
     "oid"=>123123
 );
@@ -18,4 +18,3 @@ $url = $host."/x/internal/v3/fav/add";
 $res = $apitest->httpPost($url,$params);
 
 var_dump($res);
-
